@@ -24,7 +24,7 @@ class ChatListingScreen extends StatelessWidget {
                     ),
                     CircleAvatar(
                       backgroundImage: AssetImage(chats[position].icon),
-                      radius: 30,
+                      radius: imageRadius,
                     ),
                     Expanded(
                         child: Column(

@@ -40,8 +40,8 @@ class HeaderWidget extends StatelessWidget {
             alignment: Alignment.bottomRight,
             children: [
               Container(
-                width: 60,
-                height: 60,
+                width: imageRadius * 2,
+                height: imageRadius * 2,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(80, 96, 100, 102),
                   borderRadius: BorderRadius.circular(10),
@@ -107,7 +107,7 @@ class ItemWidget extends StatelessWidget {
                 ),
                 CircleAvatar(
                   backgroundImage: AssetImage(community.iconPath ?? ''),
-                  radius: 30,
+                  radius: imageRadius,
                 ),
                 Expanded(
                     child: Column(

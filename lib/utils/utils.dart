@@ -4,6 +4,8 @@ import 'package:whats_app_clone/data/entities/community.dart';
 import 'package:whats_app_clone/data/entities/contact.dart';
 import 'package:whats_app_clone/data/entities/status.dart';
 
+const imageRadius = 25.0;
+
 final chats = [
   Chat("Pak IT Companies Review", "assets/images/pak_it_review.png",
       "~ Safi: + plus you cannot join any company", "12:20 PM"),
@@ -102,4 +104,41 @@ final contacts = [
   Contact(type: ContactType.contact),
   Contact(type: ContactType.community),
   Contact(type: ContactType.header),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user_me.png",
+      title: "+92xxxxxxxx(You)",
+      statusMessage: "Message yourself"),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user.png",
+      title: "John Doe",
+      statusMessage:
+          "The world’s oldest wooden wheel has been around for more than 5,000 years"),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user.png",
+      title: "Jordan Patterson",
+      statusMessage: "Dead skin cells are a main ingredient in household dust"),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user.png",
+      title: "Ellis Dean",
+      statusMessage: "Sudan has more pyramids than any country in the world"),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user.png",
+      title: "Ervin Bass",
+      statusMessage: "The bumblebee bat is the world’s smallest mammal"),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user.png",
+      title: "Bizz John",
+      statusMessage: "The circulatory system is more than 60,000 miles long"),
+  Contact(
+      type: ContactType.item,
+      iconPath: "assets/images/user.png",
+      title: "Jeremiah Warren",
+      statusMessage:
+          "The world’s first animated feature film was made in Argentina"),
 ];

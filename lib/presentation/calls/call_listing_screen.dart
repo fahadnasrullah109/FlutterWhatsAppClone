@@ -70,7 +70,7 @@ class HeaderWidget extends StatelessWidget {
           children: [
             CircleAvatar(
               backgroundColor: Color.fromARGB(255, 0, 128, 105),
-              radius: 30,
+              radius: imageRadius,
               child: Icon(
                 Icons.link,
                 color: Color.fromARGB(255, 248, 248, 249),
@@ -120,7 +120,7 @@ class ItemWidget extends StatelessWidget {
         children: [
           CircleAvatar(
             backgroundImage: AssetImage(call.iconPath ?? ""),
-            radius: 30,
+            radius: imageRadius,
           ),
           const SizedBox(
             width: 8.0,

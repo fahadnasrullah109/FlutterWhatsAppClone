@@ -54,7 +54,7 @@ class StatusMe extends StatelessWidget {
             children: [
               const CircleAvatar(
                 backgroundImage: AssetImage("assets/images/user_me.png"),
-                radius: 30,
+                radius: imageRadius,
               ),
               ClipOval(
                 child: Material(
@@ -139,7 +139,7 @@ class StatusItemWidget extends StatelessWidget {
             ),
             CircleAvatar(
               backgroundImage: AssetImage(status.iconPath ?? ""),
-              radius: 30,
+              radius: imageRadius,
             ),
             const SizedBox(
               width: 8.0,
