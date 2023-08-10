@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:whats_app_clone/data/entities/call.dart';
+import 'package:whats_app_clone/presentation/contact/select_contact_screen.dart';
 import 'package:whats_app_clone/utils/utils.dart';
 
 class CallListingScreen extends StatelessWidget {
@@ -28,7 +31,15 @@ class CallListingScreen extends StatelessWidget {
             }),
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageTransition(
+                type: PageTransitionType.rightToLeft,
+                child: const SelectContactScreen(),
+              ),
+            );
+          },
           backgroundColor: const Color.fromARGB(255, 0, 128, 105),
           child: const Icon(
             Icons.add_call,

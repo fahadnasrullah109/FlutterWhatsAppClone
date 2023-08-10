@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:whats_app_clone/presentation/contact/select_contact_screen.dart';
 import 'package:whats_app_clone/utils/utils.dart';
 
@@ -82,8 +83,10 @@ class ChatListingScreen extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => const SelectContactScreen()),
+              PageTransition(
+                type: PageTransitionType.rightToLeft,
+                child: const SelectContactScreen(),
+              ),
             );
           },
           backgroundColor: const Color.fromARGB(255, 0, 128, 105),
