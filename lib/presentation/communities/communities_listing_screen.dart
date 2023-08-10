@@ -98,83 +98,89 @@ class ItemWidget extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          Row(
-            children: [
-              const SizedBox(
-                width: 8.0,
-              ),
-              CircleAvatar(
-                backgroundImage: AssetImage(community.iconPath ?? ''),
-                radius: 30,
-              ),
-              Expanded(
-                  child: Column(
-                children: [
-                  Row(
-                    children: [
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      Expanded(
-                          child: Text(
-                        community.title ?? '',
-                        style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 18, 27, 34)),
-                      )),
-                      Text(
-                        community.timestamp ?? '',
-                        style: const TextStyle(
-                            fontSize: 11,
-                            color: Color.fromARGB(255, 96, 100, 102)),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      Expanded(
-                        child: Text(
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          community.description ?? '',
-                          style: const TextStyle(
-                              fontSize: 14,
-                              color: Color.fromARGB(255, 96, 100, 102)),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              )),
-              const SizedBox(
-                width: 8,
-              ),
-            ],
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
+          InkWell(
+            onTap: () {},
             child: Row(
               children: [
-                SizedBox(
-                  width: 20,
+                const SizedBox(
+                  width: 8.0,
                 ),
-                Icon(
-                  Icons.chevron_right,
-                  color: Color.fromARGB(255, 96, 100, 102),
+                CircleAvatar(
+                  backgroundImage: AssetImage(community.iconPath ?? ''),
+                  radius: 30,
                 ),
-                SizedBox(
-                  width: 22,
+                Expanded(
+                    child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Expanded(
+                            child: Text(
+                          community.title ?? '',
+                          style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 18, 27, 34)),
+                        )),
+                        Text(
+                          community.timestamp ?? '',
+                          style: const TextStyle(
+                              fontSize: 11,
+                              color: Color.fromARGB(255, 96, 100, 102)),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Expanded(
+                          child: Text(
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            community.description ?? '',
+                            style: const TextStyle(
+                                fontSize: 14,
+                                color: Color.fromARGB(255, 96, 100, 102)),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                )),
+                const SizedBox(
+                  width: 8,
                 ),
-                Text(
-                  'View all',
-                  style: TextStyle(
-                      fontSize: 16, color: Color.fromARGB(255, 96, 100, 102)),
-                )
               ],
+            ),
+          ),
+          InkWell(
+            onTap: () {},
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(
+                    Icons.chevron_right,
+                    color: Color.fromARGB(255, 96, 100, 102),
+                  ),
+                  SizedBox(
+                    width: 22,
+                  ),
+                  Text(
+                    'View all',
+                    style: TextStyle(
+                        fontSize: 16, color: Color.fromARGB(255, 96, 100, 102)),
+                  )
+                ],
+              ),
             ),
           ),
         ],

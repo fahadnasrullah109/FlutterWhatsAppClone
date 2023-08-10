@@ -128,38 +128,41 @@ class StatusItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          const SizedBox(
-            width: 8.0,
-          ),
-          CircleAvatar(
-            backgroundImage: AssetImage(status.iconPath ?? ""),
-            radius: 30,
-          ),
-          const SizedBox(
-            width: 8.0,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                status.senderTitle ?? "",
-                style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 18, 27, 34)),
-              ),
-              Text(
-                status.timestamp ?? "",
-                style: const TextStyle(
-                    fontSize: 11, color: Color.fromARGB(255, 96, 100, 102)),
-              ),
-            ],
-          )
-        ],
+    return InkWell(
+      onTap: () {},
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            const SizedBox(
+              width: 8.0,
+            ),
+            CircleAvatar(
+              backgroundImage: AssetImage(status.iconPath ?? ""),
+              radius: 30,
+            ),
+            const SizedBox(
+              width: 8.0,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  status.senderTitle ?? "",
+                  style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 18, 27, 34)),
+                ),
+                Text(
+                  status.timestamp ?? "",
+                  style: const TextStyle(
+                      fontSize: 11, color: Color.fromARGB(255, 96, 100, 102)),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

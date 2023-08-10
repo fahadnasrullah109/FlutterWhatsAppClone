@@ -62,43 +62,46 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(8.0),
-      child: Row(
-        children: [
-          CircleAvatar(
-            backgroundColor: Color.fromARGB(255, 0, 128, 105),
-            radius: 30,
-            child: Icon(
-              Icons.link,
-              color: Color.fromARGB(255, 248, 248, 249),
+    return InkWell(
+      onTap: () {},
+      child: const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            CircleAvatar(
+              backgroundColor: Color.fromARGB(255, 0, 128, 105),
+              radius: 30,
+              child: Icon(
+                Icons.link,
+                color: Color.fromARGB(255, 248, 248, 249),
+              ),
             ),
-          ),
-          SizedBox(
-            width: 10.0,
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Create call link",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 18, 27, 34)),
-                ),
-                Text(
-                  "Share a link for your WhatsApp call",
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Color.fromARGB(255, 96, 100, 102),
+            SizedBox(
+              width: 10.0,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Create call link",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 18, 27, 34)),
                   ),
-                ),
-              ],
+                  Text(
+                    "Share a link for your WhatsApp call",
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color.fromARGB(255, 96, 100, 102),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

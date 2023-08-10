@@ -1,6 +1,7 @@
 import 'package:whats_app_clone/data/entities/call.dart';
 import 'package:whats_app_clone/data/entities/chat.dart';
 import 'package:whats_app_clone/data/entities/community.dart';
+import 'package:whats_app_clone/data/entities/contact.dart';
 import 'package:whats_app_clone/data/entities/status.dart';
 
 final chats = [
@@ -94,4 +95,11 @@ final calls = [
       title: "Asad",
       iconPath: "assets/images/asad.png",
       description: "Today, 6:10 PM"),
+];
+
+final contacts = [
+  Contact(type: ContactType.group),
+  Contact(type: ContactType.contact),
+  Contact(type: ContactType.community),
+  Contact(type: ContactType.header),
 ];

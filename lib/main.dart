@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Whats App Clone',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 0, 128, 105)),
+          seedColor: const Color.fromARGB(255, 0, 128, 105),
+        ),
         useMaterial3: true,
       ),
       home: const Scaffold(
